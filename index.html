@@ -7,11 +7,34 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <center><title>Kaijun Lin</title></center>
+    <body onload = "typeWriter();">
+    <script>
+        var i = 0;
+        var txt = 'I am Kaijun Lin';
+        var speed = 100;
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+    </script>
+    <!-- <script>
+    var string = "Kaijun Lin";
+    var str = string.split("");
+    var el = document.getElementById('str');
+    (function animate() {
+        str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
+        var running = setTimeout(animate, 90);
+    })();
+    </script> -->
     </head>
     <!-- <body background = "1.jpg"> -->
     <body>
-        <h1>Hi!</h1>
-        <img src = "signature.gif" width="35%"/>
+        <h2>Hi!</h2>
+        <h1 id = "demo"></h1>
         <p>See <a href = "MyProjects.html"> <font color = 8BA7BF><b> my projects, </b> </font></a> find and <a href = "mailto:kaijun_lin@gatech.edu"><font color = 8BA7BF><b>contact me, </b></font></a>
             view<a href = "Resume.html"><font color = 8BA7BF> <b> my resume, </b></font></a> and <a href = "AboutMe.html"> <font color = 8BA7BF> <b>know more about me.</b></font></a> </p>
         <div>
@@ -20,5 +43,6 @@
             <a href="https://www.linkedin.com/in/kaijun-lin-76823714b" class="fa fa-linkedin"></a>
             <a href="https://github.com/Klin04" class="fa fa-github"></a>
         </div>
+
     </body>
     </html>
